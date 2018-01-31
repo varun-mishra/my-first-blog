@@ -18,7 +18,8 @@ from django.contrib import admin
 from main_app import views
 
 urlpatterns = [
-    url(r'/',views.index),
+    # url(r'/',views.index),
     url(r'^admin/', admin.site.urls),
     url(r'^index/',views.index),
+    url(r'',include(blog.urls)),
 ]
